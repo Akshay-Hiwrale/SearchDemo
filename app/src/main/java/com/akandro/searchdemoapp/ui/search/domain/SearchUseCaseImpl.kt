@@ -1,6 +1,8 @@
 package com.akandro.searchdemoapp.ui.search.domain
 
 import com.akandro.searchdemoapp.model.Search
+import com.akandro.searchdemoapp.ui.search.data.LessonRepositoryApi
+import com.akandro.searchdemoapp.ui.search.data.TestRepositoryApi
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -15,15 +17,12 @@ class SearchUseCaseImpl(
     //it will return the merged and sorted list
     override fun getMergedSearchItems(query: String): List<Search> {
         val lessonSearch: List<Search> = lessonRepository.getSearchItems(query).map { lesson ->
-
             Search(lesson.id, lesson.type, lesson.title, returnPriority(lesson.title, query))
         }
         val testSearch: List<Search> = testRepository.getSearchItems(query).map { test ->
             Search(test.id, "test", test.title, returnPriority(test.title, query))
         }
-        return (lessonSearch + testSearch).sortedByDescending {
-            it.priority
-        }
+        return (lessonSearch + testSearch)
     }
 
     private fun returnPriority(str: String, query: String): Int {

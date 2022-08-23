@@ -13,11 +13,12 @@ import com.akandro.searchdemoapp.utils.*
 class SearchViewModel(private val searchUseCase: SearchUseCase): ViewModel() {
     val searchResponse = MutableLiveData<VMState<Search>>()
 
-    //this fun will send the final data either its success data or error data state
+    //this fun will send the final sorted data either its success data or error data state
     fun getSearchResultByQuery(searchQuery: String) {
         searchResponse.postLoading()
-        searchUseCase.getMergedSearchItems(searchQuery)
-            .executeIo({
+        searchUseCase.getMergedSearchItems(searchQuery).sortedByDescending {
+            it.priority
+        }.executeIo({
                 searchResponse.postSuccess(it)
             }, { e ->
                 searchResponse.postError(e)

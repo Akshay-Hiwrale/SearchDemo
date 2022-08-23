@@ -1,7 +1,6 @@
-package com.akandro.searchdemoapp.ui.search.domain
+package com.akandro.searchdemoapp.ui.search.data
 
 import com.akandro.searchdemoapp.model.Test
-import com.akandro.searchdemoapp.ui.search.data.TestLocalSource
 
 /**
  * Created by Akshay Hiwrale on 02/08/22.
