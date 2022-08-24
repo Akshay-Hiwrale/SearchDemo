@@ -1,8 +1,8 @@
-package com.akandro.searchdemoapp.ui.search.domain
+package com.akandro.searchdemoapp.domain
 
 import com.akandro.searchdemoapp.model.Search
-import com.akandro.searchdemoapp.ui.search.data.LessonRepositoryApi
-import com.akandro.searchdemoapp.ui.search.data.TestRepositoryApi
+import com.akandro.searchdemoapp.data.LessonRepositoryApi
+import com.akandro.searchdemoapp.data.TestRepositoryApi
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 

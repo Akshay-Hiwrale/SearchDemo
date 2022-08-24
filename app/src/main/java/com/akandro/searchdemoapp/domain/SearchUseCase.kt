@@ -1,4 +1,4 @@
-package com.akandro.searchdemoapp.ui.search.domain
+package com.akandro.searchdemoapp.domain
 
 import com.akandro.searchdemoapp.model.Search
 

@@ -1,8 +1,7 @@
-package com.akandro.searchdemoapp.ui.search.data
+package com.akandro.searchdemoapp.data
 
 import com.akandro.searchdemoapp.database.LessonDao
 import com.akandro.searchdemoapp.model.Lesson
-import com.akandro.searchdemoapp.ui.search.data.LessonLocalSource
 
 /**
  * Created by Akshay Hiwrale on 02/08/22.

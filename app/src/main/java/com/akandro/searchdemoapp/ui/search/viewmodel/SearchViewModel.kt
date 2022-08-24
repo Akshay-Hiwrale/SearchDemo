@@ -3,7 +3,7 @@ package com.akandro.searchdemoapp.ui.search.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.akandro.searchdemoapp.model.Search
-import com.akandro.searchdemoapp.ui.search.domain.SearchUseCase
+import com.akandro.searchdemoapp.domain.SearchUseCase
 import com.akandro.searchdemoapp.utils.*
 
 /**

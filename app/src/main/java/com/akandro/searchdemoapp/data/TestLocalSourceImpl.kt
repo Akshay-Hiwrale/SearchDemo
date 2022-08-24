@@ -1,4 +1,4 @@
-package com.akandro.searchdemoapp.ui.search.data
+package com.akandro.searchdemoapp.data
 
 import com.akandro.searchdemoapp.database.TestDao
 import com.akandro.searchdemoapp.model.Test
